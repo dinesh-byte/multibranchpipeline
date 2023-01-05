@@ -1,29 +1,27 @@
 pipeline {
    agent any
    stages {
-       stage('Build Code From DEV') {
+       stage('Build Code') {
            steps {
                sh """
                echo "Building Artifact"
                """
            }
        }
-    stages {
-       stage('Build CodeFrom Dev') {
-           steps {
-               sh """
-               echo "Building Artifact"
-               """
-           }
-       }
-      stage('Deploy Code From Dev') {
-          steps {
+    
+    stage('Deploy Code') {
+            steps {
                sh """
                echo "Deploying Code1"
                """
           }
       }
+    stage('Deploy Code') {
+            steps {
+                sh """
+                echo "Deploying Code1"
+                """
+          }
+      }
    }
-}
-
 }
